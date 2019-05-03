@@ -1,0 +1,45 @@
+---
+title: "Developing Data Products - Week 4 Assignment"
+author: "AP"
+date: "5/2/2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+library(shiny)
+
+# Loading "datasets" package
+library(datasets)
+```
+
+## Overview
+<div class = "blue">
+This shiny application produces a bar plot of the arrests per 100,000 residents for assault, murder, and rape in each of the 50 US states in 1973. Also given is the percent of the population living in urban areas. 
+
+> - The app is hosted at: <font size="4"> https://mathwiz.shinyapps.io/Developing_Data_Products_Assignment4/ </font>
+
+> - The source code can be found here: <font size="4"> https://github.com/afowler23/Developing_Data_Products_Week4Assignment </font>
+</div>
+
+## Data
+<div class = "blue">
+The data used is from the 'datasets' package in R called USArrests. This data set contains statistics, in arrests per 100,000 residents for assault, murder, and rape in each of the 50 US states in 1973. Also given is the percent of the population living in urban areas. A summary of the data is below followed by a preview of the actual data.
+</div>
+```{r, echo = FALSE}
+summary(USArrests)
+```
+
+## How the app works
+<div class = "blue">
+The user will select the State from the dropbox and the application will show a bar plot of the arrest per 100,000 residents for each crime for that particular state.
+
+Below the bar plot you can find the total arrests per 100,000 residents for all crimes for that state and the percent of the population living in urban areas.
+</div>
+
+## Preview of a selection
+
+```{r pressure, echo = FALSE, out.width = '70%'}
+knitr::include_graphics("Assign4Fig.png")
+```
